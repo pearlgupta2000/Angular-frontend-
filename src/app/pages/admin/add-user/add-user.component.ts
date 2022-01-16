@@ -12,7 +12,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class AddUserComponent implements OnInit {
     hide=true;
 
-  constructor(private loginService:LoginService,private snackbar:MatSnackBar,private _route:ActivatedRoute) { }
+  constructor(private loginService:LoginService,private snackbar:MatSnackBar,private _route:ActivatedRoute,private route:Router) { }
 
   userdata={
     _username:'',
@@ -64,7 +64,9 @@ export class AddUserComponent implements OnInit {
           'User Added Succesfully!',
           'success'
         )
+
       }
+      this.route.navigate(['/admin-dashboard/view-users']);
     }
     else{
       this.snackbar.open('Both passwords should be same', '', {
