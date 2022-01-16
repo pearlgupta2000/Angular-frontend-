@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon">
+      <img src="assets/img.png" style="height: 40px;width: 40px">
+  </button>
+<!--  <span>My App</span>-->
+  <span class="example-spacer"></span>
+
+<!--  <span style="height: 10px;">Logged in {{username}}</span>-->
+  <a mat-icon-button class="example-icon favorite-icon mr20 ml20" >
+    {{username}}
+  </a>
+
+  <a
+    (click)="logout()"
+    mat-icon-button class="example-icon favorite-icon mr20 ml20" >
+    Logout
+  </a>
+</mat-toolbar>
